@@ -11,27 +11,28 @@
 
 ## Technical Context
 
-<!--
-  ACTION REQUIRED: Replace the content in this section with the technical details
-  for the project. The structure here is presented in advisory capacity to guide
-  the iteration process.
--->
-
-**Language/Version**: [e.g., Python 3.11, Swift 5.9, Rust 1.75 or NEEDS CLARIFICATION]  
-**Primary Dependencies**: [e.g., FastAPI, UIKit, LLVM or NEEDS CLARIFICATION]  
-**Storage**: [if applicable, e.g., PostgreSQL, CoreData, files or N/A]  
-**Testing**: [e.g., pytest, XCTest, cargo test or NEEDS CLARIFICATION]  
-**Target Platform**: [e.g., Linux server, iOS 15+, WASM or NEEDS CLARIFICATION]
-**Project Type**: [single/web/mobile - determines source structure]  
-**Performance Goals**: [domain-specific, e.g., 1000 req/s, 10k lines/sec, 60 fps or NEEDS CLARIFICATION]  
-**Constraints**: [domain-specific, e.g., <200ms p95, <100MB memory, offline-capable or NEEDS CLARIFICATION]  
+**Language/Version**: Python 3.13+
+**Primary Dependencies**: FastAPI, SQLModel, Next.js (App Router), OpenAI Agents SDK, OpenAI ChatKit, Official MCP SDK, Better Auth (JWT), Dapr, Gordon, kubectl-ai, Kagent
+**Storage**: Neon PostgreSQL
+**Testing**: pytest
+**Target Platform**: Minikube, DigitalOcean Kubernetes (DOKS)
+**Project Type**: Web Application (Backend + Frontend)
+**Performance Goals**: [domain-specific, e.g., 1000 req/s, 10k lines/sec, 60 fps or NEEDS CLARIFICATION]
+**Constraints**: [domain-specific, e.g., <200ms p95, <100MB memory, offline-capable or NEEDS CLARIFICATION]
 **Scale/Scope**: [domain-specific, e.g., 10k users, 1M LOC, 50 screens or NEEDS CLARIFICATION]
 
 ## Constitution Check
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-[Gates determined based on constitution file]
+- [ ] **Evolutionary Design**: Does this plan build on the previous phase without skipping steps?
+- [ ] **Stateless First**: If in Phase III+, are all server components stateless?
+- [ ] **API-First & Tool-Driven**: Is all business logic exposed via REST APIs or MCP tools? Do AI agents avoid direct database access?
+- [ ] **Event-Driven by Default**: If in Phase V, are side effects handled asynchronously via the event stream?
+- [ ] **Technology Constraints**: Does the plan adhere to the immutable core stack and cloud infrastructure?
+- [ ] **Phase Governance**: Does the plan respect the boundaries and requirements of the current project phase?
+- [ ] **Quality & Verification**: Does the plan include user stories, acceptance criteria, and tool/API definitions?
+- [ ] **Security Principles**: Does the plan enforce JWT, user isolation, and proper secret management?
 
 ## Project Structure
 
